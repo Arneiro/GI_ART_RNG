@@ -148,5 +148,5 @@ class RNG:
             ['CR',  2.7,3.1,3.5,3.9],
             ['CD',  5.4,6.2,7.0,7.8],
         ]
-        for x in random.sample(art_sub,random.radint(3,4)):
+        for x in random.sample(art_sub,4):
             print(x)
