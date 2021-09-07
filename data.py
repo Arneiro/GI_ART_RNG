@@ -13,13 +13,14 @@ art_sub=[
     ['CD',  5.4,6.2,7.0,7.8]
 ]
 
-for x in random.sample(art_sub,4):
+for x in random.sample(art_sub,random.randint(3,4)):
     z=len(x)-1
 
-    while z < len(x):
+    while z < len(x)+5:
         z+=1
 
-        print(x)
+
+    print(x)
 
 
 
