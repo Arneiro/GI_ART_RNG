@@ -35,12 +35,15 @@ for y in new:
 for x in new:
     for q in sub:
         if np.array_equal(x[0],q[0]) == True:
+
             z=0
             while z!=9:
                 z+=1
+
                 if len(x[1]) == 0:
                     x[1].append(q[1][3])
-                elif len(x[1]) <=5 and random.randint(0,1) == 1:
+                    
+                elif len(x[1]) < 6  and random.randint(0,1) == 1:
                     x[1].append(q[1][3])
                 
 print(new)
