@@ -1,4 +1,5 @@
 import random
+import numpy as np
 
 art_sub=[
     ['HP_', [209,239,269,299]],
@@ -16,6 +17,13 @@ art_sub=[
 new=random.sample(art_sub,4)
 new.sort()
 
+for y in new:
+    y[1].clear()
+    print(y)
+
 for x in new:
-    x[1].clear()
-    print(x)
+    for q in art_sub:
+        if np.array_equal(x[0],q[0]) == True:
+            print('ok')
+            x[1].append(random.choice(q[1]))
+print(x)
