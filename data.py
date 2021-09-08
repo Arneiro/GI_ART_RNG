@@ -1,6 +1,7 @@
 import random
 import numpy as np
 
+
 def list():
     Sub=[
         ['HP_', [209,239,269,299]],
@@ -23,9 +24,12 @@ for a in new:
     a[1].clear()
 
 for x in new:
+
     for q in list():
         if np.array_equal(x[0],q[0]) == True:
-            x[1].append(q[1][3])
-
+            if len(x[1]) == 0:
+                x[1].append(q[1][3])
+            elif len(x[1]) < 6 and random.choice([True, False]) == True:
+                x[1].append(q[1][3])
     print(x)
 
