@@ -32,9 +32,9 @@ new.sort()
 for y in new:
     y[1].clear()
 
-for x in sub:
-    for q in new:
+for x in new:
+    for q in sub:
         if np.array_equal(x[0],q[0]) == True:
-            q[1].append(x[1][3])
-            print(q)
+            if len(x[1]) < 1:
+                x[1].append(q[1][3])
 print(new)
