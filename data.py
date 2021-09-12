@@ -22,14 +22,20 @@ new.sort()
 
 for a in new:
     a[1].clear()
-
 for x in new:
-
+        
     for q in list():
-        if np.array_equal(x[0],q[0]) == True:
-            if len(x[1]) == 0:
-                x[1].append(q[1][3])
-            elif len(x[1]) < 6 and random.choice([True, False]) == True:
-                x[1].append(q[1][3])
-    print(x)
 
+        if np.array_equal(x[0],q[0]) == True:
+
+            x[1].append(q[1][3])
+
+c=0
+while c<5:
+    b=new[random.randint(0,3)]
+    for z in list():
+        if np.array_equal(b[0],z[0]) == True:
+            b[1].append(z[1][random.randrange(4)])
+            c+=1
+
+print(new)
